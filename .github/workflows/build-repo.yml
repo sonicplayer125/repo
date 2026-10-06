@@ -1,0 +1,81 @@
+name: Build Jailbreak Repo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "debs/**"
+      - "index.html"
+      - ".github/workflows/build-repo.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dpkg-dev bzip2 xz-utils
+
+      - name: Generate package indexes
+        run: |
+          mkdir -p public/debs
+
+          cp index.html public/index.html
+          cp -r debs/. public/debs/
+
+          cd public
+
+          dpkg-scanpackages -m debs /dev/null > Packages
+
+          gzip -9c Packages > Packages.gz
+          bzip2 -9c Packages > Packages.bz2
+          xz -9c Packages > Packages.xz
+
+      - name: Generate Release
+        run: |
+          cd public
+
+          cat > Release <<'EOF'
+          Origin: SP125's Repo
+          Label: SP125's Repo
+          Suite: stable
+          Codename: ios
+          Architectures: iphoneos-arm64
+          Components: main
+          Description: SP125's iOS jailbreak tweak repository
+          EOF
+
+          printf '\nMD5Sum:\n' >> Release
+
+          for file in Packages Packages.gz Packages.bz2 Packages.xz; do
+            printf ' %s %s %s\n' \
+              "$(md5sum "$file" | cut -d' ' -f1)" \
+              "$(stat -c%s "$file")" \
+              "$file" >> Release
+          done
+
+          printf 'SHA256:\n' >> Release
+
+          for file in Packages Packages.gz Packages.bz2 Packages.xz; do
+            printf ' %s %s %s\n' \
+              "$(sha256sum "$file" | cut -d' ' -f1)" \
+              "$(stat -c%s "$file")" \
+              "$file" >> Release
+          done
+
+      - name: Publish repo branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: repo
+          force_orphan: true
