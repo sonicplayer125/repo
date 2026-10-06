@@ -30,6 +30,7 @@ jobs:
           mkdir -p public/debs
 
           cp index.html public/index.html
+          cp CydiaIcon.png public/CydiaIcon.png
           cp -r debs/. public/debs/
 
           cd public
