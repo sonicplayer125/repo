@@ -3,4 +3,4 @@
 An iOS jailbreak tweak repository.
 
 Repo URL:
-https://sonicplayer125.github.io/sonic125-repo/
+https://sonicplayer125.github.io/repo/
