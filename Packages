@@ -1,0 +1,68 @@
+Package: com.sonic125.controlgrabber
+Version: 1.0.3-5+debug
+Architecture: iphoneos-arm64e
+Maintainer: SonicPLR125
+Installed-Size: 96
+Depends: firmware (>= 15.0), firmware (<< 17.0.2)
+Filename: debs/com.sonic125.controlgrabber_1.0.3-1+debug_iphoneos-arm64e.deb
+Size: 8670
+MD5sum: d0c3016e84a71f5a3cbf535052bc67b4
+SHA1: 0cdb3a436bb277cd10ccec0393fdea92fbbaba92
+SHA256: 1f69eab17ce9e0b4c33af294a1633d4d64248231ed50c47803863d84ad0eaa02
+Section: Tweaks
+Description: Adds a Control Center grabber in your lock screen! (However, this only works with GesturesXV.)
+Author: SonicPLR125
+Icon: https://raw.githubusercontent.com/sonicplayer125/repo/main/icons/ControlGrabber.png
+Name: ControlGrabber (Roothide)
+
+Package: com.sonic125.controlgrabber
+Version: 1.0.3-6+debug
+Architecture: iphoneos-arm64
+Maintainer: SonicPLR125
+Installed-Size: 96
+Depends: firmware (>= 15.0), firmware (<< 18.7.2)
+Filename: debs/com.sonic125.controlgrabber_1.0.3-1+debug_iphoneos-arm64.deb
+Size: 9132
+MD5sum: eab4aac2af7e3f0f3dea6e661d8c7b6f
+SHA1: 857e236ddedca1b2e1f38dd1dcce94ceb1b4db9a
+SHA256: f3b67d52b2c4d731b9491a0b017806b6f7ea3629c20e19eb8edea4e25400a042
+Section: Tweaks
+Description: Adds a Control Center grabber in your lock screen! (However, this only works with GesturesXV.)
+Author: SonicPLR125
+Icon: https://raw.githubusercontent.com/sonicplayer125/repo/main/icons/ControlGrabber.png
+Name: ControlGrabber (Rootless)
+
+Package: com.sonic125.dock10
+Version: 1.0.3-18+debug
+Architecture: iphoneos-arm64
+Maintainer: SonicPLR125
+Installed-Size: 288
+Depends: firmware (>= 15.0), firmware (<< 18.7.2), preferenceloader
+Filename: debs/com.sonic125.dock10_1.0.3-1+debug_iphoneos-arm64.deb
+Size: 13936
+MD5sum: 0500c4081fdff99b7eb17202810ca879
+SHA1: 78cfef0e63d0258150a947c3af433f0fa027eea3
+SHA256: f0ecdb97873b993f599dad48f86e3148c4cd046399cd2ebbf4463175ca85cdcb
+Section: Tweaks
+Description: Replace that pesky ol' square dock with a better one!
+Author: SonicPLR125
+Icon: https://raw.githubusercontent.com/sonicplayer125/repo/main/icons/Dock10.png
+Name: Dock10 (Rootless)
+
+Package: com.sonic125.dock10
+Version: 1.0.3-19+debug
+Architecture: iphoneos-arm64e
+Maintainer: SonicPLR125
+Installed-Size: 288
+Depends: firmware (>= 15.0), firmware (<< 17.0.2), preferenceloader
+Filename: debs/com.sonic125.dock10_1.0.3-1+debug_iphoneos-arm64e.deb
+Size: 13774
+MD5sum: 5ffbc4430fa5f4f46d01209378cec7b1
+SHA1: 03d3d72a4b4ae9e565dfde7d3dbce4b6141e7c76
+SHA256: ccf512c92eeab59b0ea7412249ce1e556e17d69d4a2f182d194ae622f0e949ba
+Section: Tweaks
+Description: Replace that pesky ol' square dock with a better one!
+Author: SonicPLR125
+Icon: https://raw.githubusercontent.com/sonicplayer125/repo/main/icons/Dock10.png
+Name: Dock10 (Roothide)
+

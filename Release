@@ -1,0 +1,18 @@
+Origin: SP125's Repo
+Label: SP125's Repo
+Suite: stable
+Codename: ios
+Architectures: iphoneos-arm64
+Components: main
+Description: SP125's iOS jailbreak tweak repository
+
+MD5Sum:
+ e1a8747a7da76f927bdbaf87e0a02a94 2688 Packages
+ 2b8a0f1a78326f344774ce6966bdcecf 920 Packages.gz
+ 8ab8585881256417c0aba8c48a1bc1f8 1064 Packages.bz2
+ 69908cdf7029056ebcd6ddc6bcfaf35a 964 Packages.xz
+SHA256:
+ c70c9c0481447ad70b18f5e7761e754b1860b04621961b74b184e51ae46aca04 2688 Packages
+ 12247a7ba66d24e8e20940492f8e1cdb6798eb25997e7eaa2f209ef94a577a89 920 Packages.gz
+ e334a3e3c65e0ebd94a6299c02bdd45b54d0abdc52ecef5ae5b1ac1c48cc464e 1064 Packages.bz2
+ cfc9213afa378ccbfb766919830604a62250c5fce36c8d0026ae64848656d718 964 Packages.xz
